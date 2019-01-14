@@ -333,6 +333,7 @@
         </script>
     @endif
     @yield('scripts')
+    @include('templates.partials.api-search')
 </body>
 
 </html>
