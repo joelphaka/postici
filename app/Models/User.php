@@ -178,7 +178,14 @@ class User extends Authenticatable
 
             $path = storage_path("app/avatars/{$this->username}.png");
             
-            return file_exists($path) ? $path : $defaultPath;
+            if (!file_exists($path)) {
+                $this->has_avatar = false;
+                $this->save();
+
+                return $defaultPath;
+            }
+            
+            return $path;
         }
 
         return $defaultPath;
