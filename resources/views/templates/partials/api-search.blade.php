@@ -20,17 +20,25 @@
             },
             _renderItem: function (ul, item) {
                 return $('<li>')
-                    .append(`<a href="${item.profile_url}" style="display:block">${item.firstname} ${item.lastname}</a>`)
+                    .append(`
+                        <a href="${item.profile_url}" style="display:block;text-decoration:none">
+                            ${item.firstname} ${item.lastname}
+                        </a>
+                    `)
                     .appendTo(ul);
             }
         };
 
-        $('#q0').autocomplete(autoSearch.autocomplete);
-        $('#q1').autocomplete(autoSearch.autocomplete);
-        //$('#q2').autocomplete(autoSearch.autocomplete);
+        var as0 = $('#q0').autocomplete(autoSearch.autocomplete);
+        var as1 = $('#q1').autocomplete(autoSearch.autocomplete);
 
-        $('#q0').autocomplete('instance')._renderItem = autoSearch._renderItem;
-        $('#q1').autocomplete('instance')._renderItem = autoSearch._renderItem;
-        //$('#q2').autocomplete('instance')._renderItem = autoSearch._renderItem;
+        if ((asi = as0.autocomplete('instance'))) {
+            asi._renderItem = autoSearch._renderItem;
+        }
+
+        if ((asi = as1.autocomplete('instance'))) {
+            asi._renderItem = autoSearch._renderItem;
+        }
+
     })
 </script>
