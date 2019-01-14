@@ -5,7 +5,8 @@
         <div class="float-container">
             <img src="{{ route('user.avatar', ['username' => $post->user->username ]) . '?' . time() }}"
                  class="person-avatar pull-left img-circle"
-                 alt="{{ $post->user->getName() }}">
+                 alt="{{ $post->user->getName() }}"
+                 <?=!$post->user->hasAvatar() ? 'style="border:1px solid darkgray"' : '' ?>>
             <div class="pull-left">
                 <a href="#" class="block post-link">
                     <h5 class="text-bold text-inherit v-space-0 post-title">
