@@ -66,7 +66,7 @@
 @section('scripts')
     <script src="{{ url('/assets/js/jquery.validate.js') }}"></script>
     <script src="{{ url('/assets/js/validator.js') }}"></script>
-    <script>/*
+    <script>
         $(function () {
             var f104Validator = $('#form104').validate(validator({
                 rules: {
@@ -80,6 +80,6 @@
                 f104Validator.reset();
                 f104Validator.clean();
             })
-        });*/
+        });
     </script>
 @endSection
