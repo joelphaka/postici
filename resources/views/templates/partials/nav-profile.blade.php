@@ -9,7 +9,7 @@
             </button>
             <form action="{{ route('search.index') }}" class="search-control">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="q" name="q" placeholder="Search" value="{{ request()->query('q') }}">
+                    <input type="text" class="form-control" id="q0" name="q" placeholder="Search" value="{{ request()->query('q') }}">
                 </div>
                 <button class="btn btn-primary" type="submit">
                     <span class="glyphicon glyphicon-search"></span>
@@ -77,7 +77,7 @@
                 <form action="{{ route('search.index') }}" class="navbar-form navbar-right" role="search" id="nav-form">
                     <div class="search-control">
                         <div class="form-group" style="margin-right:-7px">
-                            <input type="text" class="form-control" id="q" name="q" placeholder="Search" value="{{ request()->query('q') }}" style="height:30px">
+                            <input type="text" class="form-control" id="q1" name="q" placeholder="Search" value="{{ request()->query('q') }}" style="height:30px">
                         </div>
                         <button class="btn btn-primary" type="submit" style="margin-left:-4px;height:30px;padding:6px 9px;font-size:12px">
                             <span class="glyphicon glyphicon-search"></span>
