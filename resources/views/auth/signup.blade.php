@@ -1,11 +1,5 @@
 @extends('templates.layouts.default')
 
-@section('styles')
-    <link rel="stylesheet" href="{{ url('/assets/jquery-ui/jquery-ui.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url('/assets/jquery-ui/jquery-ui.structure.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url('/assets/jquery-ui/jquery-ui.theme.css') }}" type="text/css">
-@endsection
-
 @section('content')
     <div class="row margin-top-10">
         <div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">

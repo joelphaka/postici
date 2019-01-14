@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url('/assets/css/bootstrap.css') }}" rel="stylesheet">
+    
+    <!-- JQuery UI CSS -->
     <link href="{{ url('/assets/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ url('/assets/jquery-ui/jquery-ui.structure.min.css') }}" rel="stylesheet">
     <link href="{{ url('/assets/jquery-ui/jquery-ui.theme.min.css') }}" rel="stylesheet">
@@ -20,6 +22,7 @@
     <!-- Custom CSS -->
     <link href="{{ url('/assets/css/main.css') }}" rel="stylesheet">
     <link href="{{ url('/assets/css/styles.css') }}" rel="stylesheet">
+    
     @yield('styles')
 
     <!-- Custom Fonts -->
