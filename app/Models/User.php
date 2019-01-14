@@ -172,23 +172,12 @@ class User extends Authenticatable
 
     public function avatar()
     {
-        $defaultPath = storage_path("app/avatars/user-icon.png");
-
         if ($this->hasAvatar()) {
 
-            $path = storage_path("app/avatars/{$this->username}.png");
-            
-            if (!file_exists($path)) {
-                $this->has_avatar = false;
-                $this->save();
-
-                return $defaultPath;
-            }
-            
-            return $path;
+            return storage_path("app/avatars/{$this->username}.png");
         }
 
-        return $defaultPath;
+        return storage_path("app/avatars/user-icon.png");
     }
 
     public function saveLastSeen()
