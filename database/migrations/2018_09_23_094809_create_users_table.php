@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('lastname', 32);
             $table->date('birthdate')->nullable();
             $table->tinyInteger('gender')->nullable();
-            $table->string('biography', 255);
+            $table->string('biography', 255)->nullable();
             $table->boolean('has_avatar')->default(0);
             $table->string('country_id', 3)->nullable();
             $table->timestamp('last_seen')->nullable();
