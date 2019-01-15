@@ -15,10 +15,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $pattern = '/^(([\p{L}]+)|([\p{L}]+[\p{L}\s\-]*[\p{L}]+))$/u';
+        /*
+         * if the server uses HTTPS uncomment this line.
+         */
+        URL::forceScheme('https');
 
         Validator::extend('alpha_space_dash',
             function ($value) use ($pattern) {
+                $pattern = '/^(([\p{L}]+)|([\p{L}]+[\p{L}\s\-]*[\p{L}]+))$/u';
+                
                 return preg_match($pattern, $value);
             }
         );
