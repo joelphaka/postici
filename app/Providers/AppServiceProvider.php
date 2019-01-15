@@ -15,12 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Force the application to use the protocol.
-         */
-        $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
-        URL::forceScheme($protocol);
-
         $pattern = '/^(([\p{L}]+)|([\p{L}]+[\p{L}\s\-]*[\p{L}]+))$/u';
 
         Validator::extend('alpha_space_dash',
