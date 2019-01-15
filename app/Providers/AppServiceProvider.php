@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         /*
-         * For the application to use the protocol.
+         * Force the application to use the protocol.
          */
         $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
         URL::forceScheme($protocol);
