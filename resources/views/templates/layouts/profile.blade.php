@@ -349,7 +349,7 @@
         </script>
     @endif
     @yield('scripts')
-    @include('templates.partials.api-search')
+    @include('templates.partials.auto-complete')
 </body>
 
 </html>

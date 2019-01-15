@@ -52,7 +52,7 @@
 @yield('modals')
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ url('/assets/js/bootstrap.min.js') }}"></script>
-@include('templates.partials.api-search')
+@include('templates.partials.auto-complete')
 <script src="{{ url('/assets/js/script.js') }}"></script>
 @yield('scripts')
 </body>
