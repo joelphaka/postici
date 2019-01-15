@@ -7,14 +7,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <form action="{{ route('search.index') }}" class="search-control">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="q0" name="q" placeholder="Search" value="{{ request()->query('q') }}">
-                </div>
-                <button class="btn btn-primary" type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </form>
+            @if (Auth::check())
+                <form action="{{ route('search.index') }}" class="search-control">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="q0" name="q" placeholder="Search" value="{{ request()->query('q') }}">
+                    </div>
+                    <button class="btn btn-primary" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </form>
+            @endif
             <a href="/" class="navbar-brand profile">PI</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">

@@ -9,14 +9,16 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ route('home') }}">PI</a>
-            <form id="navForm" action="{{ route('search.index') }}" class="search-control" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="q0" name="q" placeholder="Search" value="{{ request()->query('q') }}">
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </form>
+            @if (Auth::check())
+                <form id="navForm" action="{{ route('search.index') }}" class="search-control" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="q0" name="q" placeholder="Search" value="{{ request()->query('q') }}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </form>
+            @endif
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
