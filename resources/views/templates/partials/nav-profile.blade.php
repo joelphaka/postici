@@ -92,7 +92,7 @@
     <script>
         $(function () {
             $('form[role=search]').submit(function () {
-                var q = $(this).find('#q').val().toString().trim();
+                var q = $(this).find('input[name=q]').val().toString().trim();
 
                 return Boolean(q);
             });
