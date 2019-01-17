@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         //URL::forceScheme('https');
 
         Validator::extend('alpha_space_dash',
-            function ($value) use ($pattern) {
+            function ($value) {
                 $pattern = '/^(([\p{L}]+)|([\p{L}]+[\p{L}\s\-]*[\p{L}]+))$/u';
                 
                 return preg_match($pattern, $value);
