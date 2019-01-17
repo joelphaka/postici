@@ -15,10 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * if the server uses HTTPS uncomment this line.
-         */
-        URL::forceScheme('https');
+        //if the server uses HTTPS uncomment this line.
+        //URL::forceScheme('https');
 
         Validator::extend('alpha_space_dash',
             function ($value) use ($pattern) {
