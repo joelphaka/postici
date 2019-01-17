@@ -9,9 +9,12 @@
                 <h2 class="pull-left v-space-0">
                     Recent posts
                 </h2>
-                <button class="btn btn-default pull-right" data-toggle="modal" data-target="#modal05">
+                <button class="btn btn-default pull-right toggleable-rev" data-toggle="modal" data-target="#modal05">
                     Create Post
                 </button>
+                <a href="{{ route('post.create') }}" class="btn btn-default pull-right toggleable">
+                    Create Post
+                </a>
             </div>
             <hr class="margin-bottom-30">
             @if ($posts->count())

@@ -702,6 +702,10 @@ a.avatar-p > img.avatar-p {
 
 }
 
+.toggleable { display: block }
+
+.toggleable-rev { display: none }
+
 @media screen and (min-width: 768px) {
     .navbar-form {
         margin-top: 10px !important;
@@ -788,8 +792,6 @@ a.avatar-p > img.avatar-p {
         font-size: 1.1em;
     }
 
-    .toggleable { display: block }
-
     .sidebar-toggle { display: block; }
 
 
@@ -810,21 +812,10 @@ a.avatar-p > img.avatar-p {
         display: inline-block;
     }
 
-    /*
-    #sidebar-nav.nav a.btn {
-        position: relative;
-        text-align: left;
-    }
+    .toggleable { display: none }
 
-    #sidebar-nav.nav a.btn .glyphicon {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }*/
+    .toggleable-rev { display: block }
+
 }
 
 
