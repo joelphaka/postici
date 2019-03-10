@@ -207,7 +207,7 @@
                         minlength: 6,
                         maxlength: 255,
                     },
-                    confirm_password: {
+                    password_confirmation: {
                         equalTo: '#password'
                     },
                     accept_tcs: {
