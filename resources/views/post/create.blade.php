@@ -4,7 +4,7 @@
     <div class="margin-top-30"></div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <form action="{{ route('post.store') }}" method="post" class="panel panel-primary">
+            <form action="{{ route('post.store') }}" method="post" id="form07" class="panel panel-primary">
                 <div class="panel-heading custom-blue">
                     Create Post
                 </div>
@@ -53,7 +53,7 @@
     <script src="{{ url('/assets/js/validator.js') }}"></script>
     <script>
         $(function () {
-            $('#form104').validate(validator({
+            $('#form07').validate(validator({
                 rules: {
                     title: {required: true, notEmpty: true, minlength: 6, maxlength: 64},
                     content: {required: true, notEmpty: true, minlength: 6},
