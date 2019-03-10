@@ -699,7 +699,6 @@ a.avatar-p > img.avatar-p {
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-
 }
 
 .toggleable { display: block }
@@ -737,6 +736,8 @@ a.avatar-p > img.avatar-p {
         margin-bottom: 0!important;
         max-width: 278px;
     }
+
+    .sidebar-toggle { display: block }
 
     .avatar-p, img.avatar-p {
         width: 160px;
@@ -792,7 +793,9 @@ a.avatar-p > img.avatar-p {
         font-size: 1.1em;
     }
 
-    .sidebar-toggle { display: block; }
+    .toggleable { display: none }
+
+    .toggleable-rev { display: block }
 
     .display-block-768 {
         display: block;
@@ -809,11 +812,6 @@ a.avatar-p > img.avatar-p {
     .display-inline-block-768 {
         display: inline-block;
     }
-
-    .toggleable { display: none }
-
-    .toggleable-rev { display: block }
-
 }
 
 

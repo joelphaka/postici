@@ -69,7 +69,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->checkPost($id);
-        abort_if($request->input('id') != $id, 500, 'Tentative request');
+        abort_if($request['id'] != $id, 500, 'Tentative request');
 
         $this->validate($request, [
             'title' => 'required|min:6|max:64',

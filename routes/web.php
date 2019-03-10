@@ -207,7 +207,7 @@ Route::group(['middleware' => 'auth'], function () {
  * API Routes (Auth Required!)
  */
 Route::group(['prefix'=> 'api', 'middleware'=>'auth'], function () {
-    Route::get('/countries/', [
+    Route::get('/countries', [
         'uses' => 'ApiController@getCountries',
         'as' => 'api.countries'
     ]);

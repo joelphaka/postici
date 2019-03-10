@@ -1,5 +1,9 @@
 @extends('templates.layouts.simple')
 
+@section('pageTitle')
+    Edit post
+@endSection
+
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -59,10 +63,12 @@
                     </div>
                 </div>
             </form>
-            <a href="{{ url()->previous() }}" class="btn block">
-                <span class="glyphicon glyphicon-arrow-left"></span>
-                <span>Go back</span>
-            </a>
+            @if (parse_url(request()->url())['path'] != parse_url(url()->previous())['path'])
+                <a href="{{ url()->previous() }}" class="btn center-block text-center" style="width:74px">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    <span>Back</span>
+                </a>
+            @endif
         </div>
     </div>
 @endSection
@@ -81,7 +87,7 @@
                 {{ csrf_field() }}
                 {{ method_field('DELETE') }}
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="btnRemoveAv">Yes</button>
+                    <button type="submit" class="btn btn-primary">Yes</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
                 </div>
             </form>
