@@ -52,7 +52,7 @@ class AuthController extends Controller
         $rules = [
             'firstname' => 'required|alpha_dash|max:32',
             'lastname' => 'required|alpha_dash|max:32',
-            'username' => 'required|alpha_num|min:6|unique:users|max:32',
+            'username' => 'required|alpha_num|min:6|unique:users|max:32|not_in:admin,administrator,Admin,Administrator',
             'email' => 'required|email|unique:users|max:100',
             'password' => 'required|confirmed|min:6|max:255',
             'gender' => 'in:-1,1,2',
@@ -63,8 +63,8 @@ class AuthController extends Controller
         $customMessages = [
             'birthdate.date' => 'The birthdate is not a valid date. Format: yyyy-mm-dd',
             'birthdate.before' => 'You must be at least 18 years old',
-            #'accept_tcs.required' => 'You must accept the terms and conditions.',
-            'accept_tcs.accepted' => 'You must accept the terms and conditions.'
+            'accept_tcs.accepted' => 'You must accept the terms and conditions.',
+            'username.not_in' => 'This username is already taken.'
         ];
 
         $this->validate($request, $rules, $customMessages);
