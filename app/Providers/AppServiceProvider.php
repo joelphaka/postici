@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
         Validator::extend('alpha_space_dash',
             function ($value) {
-                $pattern = '/^(([\p{L}]+)|([\p{L}]+[\p{L}\s\-]*[\p{L}]+))$/u';
+                $pattern = "/^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$/i";
                 
                 return preg_match($pattern, $value);
             }

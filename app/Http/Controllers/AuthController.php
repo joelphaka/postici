@@ -50,8 +50,8 @@ class AuthController extends Controller
     public function postSignup(Request $request)
     {
         $rules = [
-            'firstname' => 'required|alpha_dash|max:32',
-            'lastname' => 'required|alpha_dash|max:32',
+            'firstname' => 'required|alpha_space_dash|max:32',
+            'lastname' => 'required|alpha_space_dash|max:32',
             'username' => 'required|alpha_num|min:6|unique:users|max:32|not_in:admin,administrator,Admin,Administrator',
             'email' => 'required|email|unique:users|max:100',
             'password' => 'required|confirmed|min:6|max:255',
