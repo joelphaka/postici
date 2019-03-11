@@ -20,6 +20,9 @@ class AppServiceProvider extends ServiceProvider
 
         Validator::extend('alpha_space_dash',
             function ($value) {
+                /**
+                 * credits: https://www.regextester.com/93648
+                 */
                 $pattern = "/^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$/i";
                 
                 return preg_match($pattern, $value);
